@@ -1,0 +1,199 @@
+/* ========================================
+   2025年版モダンリセットCSS
+   WebTraining.jp Recommended
+======================================== */
+
+:root {
+    /* カラー変数 */
+    --color-text: #333;
+    --color-bg: #fff;
+    --color-link: #005fcc;
+    --color-link-hover: #004bb5;
+    --color-focus: #005fcc;
+    --color-focus-visible: #ffcc00;
+
+    /* フォント・サイズ変数 */
+    --font-family: "Noto Sans JP", "Inter", "Helvetica Neue", Arial, sans-serif;
+    --font-size-base: 16px;
+    --line-height-base: 1.6;
+    --spacing-unit: 1rem;
+}
+
+/* ========================================
+   基本リセット
+======================================== */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+blockquote,
+table,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ========================================
+   HTML・BODY設定
+======================================== */
+html {
+    font-size: 100%;
+    /* 基本16px */
+    line-height: var(--line-height-base);
+    -webkit-text-size-adjust: 100%;
+    /* モバイル文字サイズ自動調整防止 */
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 87.5%;
+        /* 約14px */
+    }
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+}
+
+/* ========================================
+   メディア要素
+======================================== */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+video {
+    filter: drop-shadow(0px 0px #fff);
+}
+
+/* ========================================
+   テキスト要素
+======================================== */
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+a:hover {
+    color: var(--color-link-hover);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+/* ========================================
+   リスト・ナビゲーション
+======================================== */
+ul,
+ol,
+nav ul,
+nav ol {
+    list-style: none;
+}
+
+/* ========================================
+   フォーム系要素
+======================================== */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+textarea {
+    resize: none;
+}
+
+::placeholder {
+    color: #aaa;
+    opacity: 1;
+}
+
+/* ========================================
+   テーブル
+======================================== */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* ========================================
+   フォーカス表示（アクセシビリティ対応）
+======================================== */
+:focus {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+:focus-visible {
+    outline: 3px solid var(--color-focus-visible);
+    outline-offset: 3px;
+}
+
+/* ========================================
+   ダークモード対応
+======================================== */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+
+    a {
+        color: #90caf9;
+    }
+
+    a:hover {
+        color: #64b5f6;
+    }
+
+    ::placeholder {
+        color: #666;
+    }
+}

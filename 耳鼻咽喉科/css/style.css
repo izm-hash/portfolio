@@ -1,0 +1,955 @@
+.zen-kaku-gothic-antique-regular {
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.pt-mono-regular {
+    font-family: "PT Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.zen-kurenaido-regular {
+    font-family: "Zen Kurenaido", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+:root {
+    --textColor: #4C3737;
+    --accentGreen: #C3F5B2;
+    --accentYellow: #F3F4B7;
+    --accentOrange: #FFB496;
+    --mainColor: #6DBFDD;
+    --white: #FAFCF0;
+    --greenA: #c3f5b2f0;
+    --yellowA: #f3f4b7ef;
+    --orangeA: #ffb496f4;
+    --numberFont: "PT Mono", monospace;
+    --mainFont: "Zen Kurenaido", sans-serif;
+    --headingFont: "Zen Kaku Gothic Antique", sans-serif;
+    --shadow: 3px 10px 8px rgba(0, 0, 0, 0.25);
+
+}
+
+
+body {
+    /* スクロールしても見えている画面をずっとグラデーションに固定する */
+    background: linear-gradient(0deg, #C4FFF3, #fff 54%);
+    min-height: 100vh;
+    background-attachment: fixed;
+    color: var(--text-color);
+    font-family: var(--mainFont);
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+img {
+    width: 100%;
+}
+
+h2 {
+    font-family: var(--headingFont);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+h3 {
+    font-family: var(--mainFont);
+    color: var(--textColor);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*-----------------------
+ ヘッダー
+ ----------------------- */
+.header {
+    max-width: 1512px;
+    height: 30%;
+    position: relative;
+}
+
+/* 〇3つのところ */
+.circle {
+    width: 600px;
+    height: 300px;
+    border-radius: 70%;
+    display: flex;
+    position: absolute;
+}
+
+.green {
+    top: -130px;
+    left: -44px;
+    background-color: var(--greenA);
+}
+
+.yellow {
+    top: -130px;
+    left: 487px;
+    background-color: var(--yellowA);
+    z-index: 1;
+}
+
+.orange {
+    top: -130px;
+    right: -108px;
+    background-color: var(--orangeA);
+}
+
+.logo img {
+    width: 90px;
+    height: 80px;
+}
+
+.logo h1 {
+    font-family: var(--headingFont);
+    color: var(--mainColor);
+    font-size: 3rem;
+    display: flex;
+}
+
+.logo {
+    width: 600px;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+
+.header-inner {
+    width: 1260px;
+    display: flex;
+    align-items: center;
+    margin: 2rem auto 0;
+}
+
+.header-address {
+    width: 400px;
+    z-index: 3;
+    padding-left: 3rem;
+}
+
+.header-address p:first-child {
+    font-family: var(--headingFont);
+    font-size: 1rem;
+    line-height: 1.8rem;
+}
+
+
+.tel img {
+    width: 30px;
+    height: 35px;
+    margin-right: 0.3rem;
+    padding-bottom: 0.4rem;
+}
+
+.tel {
+    color: #08B734;
+    display: flex;
+    align-items: end;
+    font-size: 1.8rem;
+    font-family: var(--numberFont);
+}
+
+/*-----------------------
+ KV 
+ -----------------------*/
+figure img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+
+/* キャッチコピー */
+.KV h2 {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    font-family: var(--mainFont);
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--textColor);
+    text-shadow: 0px 23px 4px #91777780;
+}
+
+/*-----------------------
+ Web予約ボタン 
+ -----------------------*/
+.web-button {
+    width: 200px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 15%;
+    right: 3%;
+    transition: transform 0.5s ease;
+    z-index: 100;
+}
+
+.web-button a:focus {
+    outline: none;
+}
+
+.web-button:hover {
+    transform: scale(1.2);
+}
+
+/*-----------------------
+ ナビゲーション 
+ -----------------------*/
+.nav-list {
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    background-color: var(--mainColor);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list li {
+    color: var(--white);
+    font-family: var(--headingFont);
+    font-size: 1.25rem;
+}
+
+.nav-list li:last-child {
+    padding-right: 4rem;
+}
+
+.nav-list li a {
+    color: var(--white);
+}
+
+.nav-list li a:focus {
+    outline: none;
+}
+
+.nav-list li a:hover {
+    color: var(--textColor);
+    font-size: 1.5rem;
+}
+
+
+
+/*-----------------------
+ 病院紹介 
+ -----------------------*/
+#concept {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.leaf img {
+    width: 52px;
+    height: 50px;
+}
+
+/* 画像を横並びに、フォント下にマーカーを引くためにblock flexの両方を適応 */
+.leaf {
+    display: block flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    color: var(--textColor);
+}
+
+.leaf p {
+    font-family: var(--mainFont);
+    color: var(--textColor);
+    margin-bottom: 3rem;
+}
+
+#concept h2,
+#first-time h2 {
+    /* display: block; */
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(transparent 85%, rgba(195, 245, 178, 0.7) 76%, rgba(195, 245, 178, 0.7) 100%);
+    border-radius: 3px;
+}
+
+.concept-inner img {
+    width: 200px;
+    height: 245px;
+    display: block;
+    margin: 1.5rem auto 0;
+    box-shadow: var(--shadow);
+}
+
+.concept {
+    width: 25%;
+    background-color: #ecb5cf40;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    margin: 3rem;
+}
+
+.kids {
+    margin-left: 6rem;
+}
+
+.concept-inner {
+    display: flex;
+    text-align: center;
+    margin-top: 2rem;
+
+}
+
+.concept h3 {
+    margin: 1rem 0;
+}
+
+.concept p {
+    padding: 1rem 2rem 1.5rem;
+    text-align: left;
+}
+
+/*-----------------------
+ 区切りの画像 
+ -----------------------*/
+.acorn {
+    width: 100%;
+    height: 110px;
+    background: url(../images/acorn.png) repeat-x left top;
+    margin: 8rem 0;
+}
+
+
+/*-----------------------
+ お知らせ 
+ -----------------------*/
+.news h2 {
+    /* display: block; */
+    width: fit-content;
+    margin: 5rem auto 3rem;
+    background: linear-gradient(transparent 85%, rgba(243, 244, 183) 76%, rgba(243, 244, 183) 100%);
+    border-radius: 3px;
+}
+
+.news-area {
+    width: 80%;
+    height: auto;
+    background-color: var(--greenA);
+    border-radius: 15px;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.news-inner {
+    width: 100%;
+    height: auto;
+    border: 3px dashed #08B734;
+    border-radius: 15px;
+    padding: 2rem;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.yellow-inner {
+    width: 30%;
+    padding: 0.5rem;
+    background-color: var(--accentYellow);
+    font-family: var(--numberFont);
+}
+
+.white-inner {
+    width: 60%;
+    padding: 0.5rem;
+    background-color: var(--white);
+}
+
+.news-inner li {
+    display: flex;
+    text-align: center;
+}
+
+
+.news-inner li:first-child {
+    margin-top: 1rem;
+}
+
+.yellow-inner {
+    margin: 0 3rem 1rem 2rem;
+    border-radius: 15px;
+}
+
+.white-inner {
+    margin-bottom: 1rem;
+    border-radius: 15px;
+}
+
+.white-inner a {
+    color: var(--textColor);
+}
+
+.white-inner a:hover {
+    font-size: 1.05rem;
+    color: var(--mainColor);
+    font-weight: bold;
+}
+
+/* 一覧はこちらボタン */
+button {
+    width: 20%;
+    padding: 0.5rem;
+    background-color: var(--mainColor);
+    color: var(--white);
+    font-family: var(--headingFont);
+    border-radius: 50vh;
+    margin-top: 2rem;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+button span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    color: var(--textColor);
+    border-radius: 50%;
+    margin-left: 2.5rem;
+}
+
+button:hover {
+    transform: scale(1.2);
+    box-shadow: var(--shadow);
+}
+
+/*-----------------------
+ 診療案内 
+ -----------------------*/
+.guidance {
+    width: 100%;
+}
+
+#guidance h2 {
+    width: fit-content;
+    margin: 5rem auto 3rem;
+    background: linear-gradient(transparent 85%, rgba(255, 180, 150) 76%, rgba(255, 180, 150) 100%);
+    border-radius: 3px;
+}
+
+#guidance p {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.guidans-area {
+    width: 70%;
+    height: auto;
+    padding: 2rem;
+    background-color: var(--yellowA);
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+.guidans-inner {
+    width: 100%;
+    height: auto;
+    border: 3px dashed #FFB923;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    justify-content: center;
+    align-content: center;
+    padding: 3rem;
+    margin: 0 auto;
+}
+
+/* 各アイコン */
+.item {
+    width: 200px;
+    height: 200px;
+    border-radius: 50vh;
+    background-color: var(--mainColor);
+    box-shadow: var(--shadow);
+    margin: 0 auto;
+}
+
+.item img {
+    width: 100px;
+    margin: 1.5rem auto 0;
+}
+
+
+.item p {
+    font-family: var(--headingFont);
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--white);
+    text-align: center;
+}
+
+/* hoverが効かなかったためaの幅と高さを指定して微調整 */
+.item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50vh;
+    padding-top: 1rem;
+    transition: transform 0.5s ease
+}
+
+.item a:hover {
+    background-color: var(--orangeA);
+    transform: scale(1.1);
+}
+
+/* モーダルウィンドウ */
+/* #close {
+    background-color: #f0dcdcd1;
+    border: 2px solid #f0dcdcd1;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#mask {
+    background-color: #55d2e8b6;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#modal1,
+#modal2,
+#modal3,
+#modal4,
+#modal5,
+#modal6 {
+    background-color: var(--white);
+    width: 300px;
+    border-radius: 15px;
+    position: absolute;
+    inset: 10rem 0 auto;
+    margin: auto;
+    z-index: 101;
+    opacity: 0;
+    visibility: hidden;
+} */
+
+
+
+
+/*----------------------- 
+初めての人向け案内
+----------------------- */
+.beginer-inner {
+    width: 85%;
+    background-color: var(--accentOrange);
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    margin: 5rem auto 0;
+}
+
+.card {
+    width: 250px;
+    height: 790px;
+    margin: 3rem auto 0;
+
+}
+
+.card img {
+    width: 250px;
+    height: 300px;
+    border-radius: 15px;
+    display: block;
+    margin: 1.5rem auto 0;
+}
+
+.num {
+    width: 110px;
+    height: 110px;
+    border-radius: 50vh;
+    color: #08B734;
+    font-family: var(--numberFont);
+    font-size: 3rem;
+    line-height: 2.4;
+    padding-left: 1.8rem;
+}
+
+
+.sec2 .num {
+    background-color: var(--greenA);
+    position: absolute;
+    bottom: 414px;
+    left: 450px;
+
+}
+
+.sec3 .num {
+    background-color: #6dbfdda3;
+    position: absolute;
+    bottom: 414px;
+    right: 446px;
+
+}
+
+.sec4 .num {
+    background-color: var(--yellowA);
+    position: absolute;
+    bottom: 414px;
+    right: 102px;
+
+}
+
+.card h3 {
+    text-align: center;
+    margin: 5rem 0 2rem;
+}
+
+.card p {
+    margin: 0 1rem;
+}
+
+
+.sec1 {
+    width: 220px;
+    height: 400px;
+}
+
+.sec1-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.sec1 h3 {
+    font-family: var(--headingFont);
+    margin: 0;
+    line-height: 1;
+}
+
+.sec1 p {
+    padding-left: 1rem;
+}
+
+.sec2 p span {
+    font-weight: bold;
+    color: #FF0B0B;
+}
+
+/* 各セクションのアイコンの大きさ指定 */
+.sec1-title img,
+.packing-title img,
+.faq-title img {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+}
+
+/* 持ち物 Q&A共通 */
+.packing-title,
+.faq-title {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0 2rem;
+}
+
+.packing-inner,
+.fqa-inner {
+    width: 85%;
+    border-radius: 15px;
+    padding: 1.5rem 0 3rem;
+    margin: 5rem auto 0;
+}
+
+/* 持ち物 */
+.packing-inner {
+    background-color: var(--accentGreen);
+}
+
+.packing-list li {
+    list-style-type: square;
+    margin-bottom: 0.5rem;
+}
+
+.packing-list {
+    padding-left: 5rem;
+}
+
+/* Q&A */
+.fqa-inner {
+    background-color: var(--accentYellow);
+    text-align: center;
+}
+
+.q_and_a dl dt::before,
+.q_and_a dl dd::before {
+    font-size: 1.25rem;
+    margin-right: 0.5rem;
+}
+
+.q_and_a dl dt::before {
+    content: "Q";
+    color: #28A9EF;
+    font-weight: bold;
+}
+
+.q_and_a dl dd::before {
+    content: "A";
+    color: #F52D17;
+    font-weight: bold;
+}
+
+.q_and_a dl dt {
+    margin: 1.5rem 0 0 5rem;
+}
+
+.q_and_a dl dd {
+    margin-left: 6rem;
+}
+
+.q_and_a {
+    text-align: left;
+}
+
+/*-----------------------
+ TOPボタン 
+ -----------------------*/
+.top-button {
+    width: 110px;
+    height: 100px;
+    background-color: var(--mainColor);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    text-align: center;
+    position: fixed;
+    bottom: 5%;
+    right: 0%;
+}
+
+.top-button p img {
+    width: 60px;
+    height: 50px;
+    margin-left: 1.5rem;
+}
+
+.top-button p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.top-button a:hover {
+    opacity: 0.4;
+}
+
+/*-----------------------
+ フッター 
+ -----------------------*/
+footer {
+    margin-top: 8rem;
+    background-color: var(--accentGreen);
+}
+
+/* フッターナビ */
+.footer-nav {
+    height: 8vh;
+    background-color: var(--accentGreen);
+}
+
+.footer-nav li {
+    font-size: 1rem;
+    color: var(--textColor);
+}
+
+.footer-nav li:first-child {
+    padding-left: 5rem;
+}
+
+.footer-nav li:last-child {
+    padding-right: 5rem;
+}
+
+.footer-nav li a {
+    color: var(--textColor);
+}
+
+.footer-nav li a:hover {
+    font-size: 1.2rem;
+    color: #08B734;
+}
+
+.fotter-inner {
+    display: flex;
+    width: 100%;
+}
+
+/* フッター左側 */
+.footer-left {
+    width: 60%;
+    text-align: center;
+}
+
+/* フッターロゴ */
+.footer-logo img {
+    width: 90px;
+    height: 80px;
+}
+
+.footer-logo p {
+    font-family: var(--headingFont);
+    color: var(--mainColor);
+    font-weight: bold;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0 3rem;
+}
+
+/* 診療時間 */
+#time table thead,
+#time table tbody th {
+    background-color: var(--mainColor);
+    color: var(--white);
+    font-family: var(--headingFont);
+    font-weight: bold;
+    width: 150px;
+}
+
+#time table thead {
+    font-size: 2rem;
+}
+
+#time table tr td {
+    background-color: var(--accentYellow);
+    width: 100px;
+}
+
+#time table tr th,
+#time table tr td {
+    border: 2px solid var(--white);
+}
+
+#time table thead tr th,
+#time table thead tr:last-child td {
+    border-top: 2px solid var(--accentGreen);
+}
+
+#time table tbody tr:last-child th,
+#time table tbody tr:last-child td {
+    border-bottom: 2px solid var(--accentGreen);
+}
+
+#time table tr th {
+    border-left: 2px solid var(--accentGreen);
+}
+
+#time table tr th:last-child,
+#time table tr td:last-child {
+    border-right: 2px solid var(--accentGreen);
+}
+
+#time p {
+    margin-top: 1rem;
+}
+
+#time p:last-child {
+    font-weight: bold;
+    color: #F52D17;
+}
+
+#time {
+    padding: 0 2rem;
+    margin-top: 5rem;
+}
+
+
+/* フッター右側 */
+.footer-right {
+    width: 40%;
+    text-align: center;
+}
+
+iframe {
+    margin-top: 2rem;
+    width: 90%;
+}
+
+.footer-right address {
+    font-style: normal;
+}
+
+small {
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+    padding: 2rem 0 1rem 0;
+}
+
+/*-----------------------
+ フェードイン 
+ -------------------------*/
+.fadein {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* 表示状態 */
+.fadein.is-show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fadein:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.fadein:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.fadein:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.fadein:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+.fadein:nth-child(5) {
+    transition-delay: 0.4s;
+}
+
+.fadein:nth-child(6) {
+    transition-delay: 0.5s;
+}
+
+/* 初期状態（隠しておく） */
+.scroll-fadein {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* 画面に入ってクラスが付与された時の状態 */
+.scroll-fadein.is-show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+
+}

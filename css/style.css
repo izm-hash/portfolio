@@ -1,0 +1,696 @@
+@charset 'UTF-8';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* color */
+  --main-color: #fff;
+  --accent-color: #1f3a5f;
+  --text-color: #000;
+
+  /* font */
+  --text-font: "Noto Sans JP", sans-serif;
+  --main-font: "Outfit", sans-serif;
+
+  /* box-shadow */
+  --shadow: 3px 4px 10px 0 #0000002a;
+
+  /* border-radius */
+  --radius: 30px;
+}
+
+/* ========================================
+共通部分
+==========================================*/
+body {
+  font-family: var(--text-font);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+h1,
+h2,
+nav {
+  font-family: var(--main-font);
+}
+
+h1 {
+  color: var(--accent-color);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+ul {
+  padding-left: 0;
+}
+
+/* 各セクションの区切りの飾り線 */
+
+.works::before,
+.skills-level::before,
+.contact::before {
+  content: "";
+  display: block;
+  width: 80%;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid var(--accent-color);
+  margin: 7rem auto;
+}
+
+/* ========================================
+ヘッダー
+==========================================*/
+
+.nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  margin: 5rem 2rem;
+}
+
+nav ul li:last-child {
+  margin-right: 3rem;
+}
+
+.nav ul li a {
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  transform: scale(1.25);
+}
+
+.hero {
+  display: flex;
+  width: 100%;
+  height: 70vh;
+  align-items: center;
+  margin: auto;
+}
+
+/* 動く四角のベース */
+.square-area {
+  position: relative;
+  width: 50%;
+  height: 70vh;
+  overflow: hidden;
+}
+
+/* 動かす四角の共通設定 */
+.floating-img {
+  position: absolute;
+}
+
+/* 各四角の位置 */
+.square--large {
+  width: 300px;
+  top: 25%;
+  left: 35%;
+}
+
+.square--medium {
+  width: 200px;
+  top: 5%;
+  left: 68%;
+}
+
+.square--small {
+  width: 100px;
+  top: 30%;
+  left: 85%;
+}
+
+/* .hero-inner {
+    width: 50%;
+    height: 70vh;
+} */
+
+.hero__content {
+  text-align: center;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.hero__text {
+  margin-top: 1.5rem;
+}
+
+/* ========================================
+about
+==========================================*/
+.about {
+  width: 80%;
+  display: flex;
+  margin: 0 auto 5rem;
+}
+
+.about-text {
+  width: 60%;
+  text-align: center;
+}
+
+.about-maintext {
+  margin-top: 1.25rem;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.profile-img {
+  width: 40%;
+  height: 30%;
+}
+
+.profile-img img {
+  display: block;
+  width: 70%;
+  height: 100%;
+  border-radius: 50vh;
+  margin: auto;
+}
+
+/* アニメーション開始前の初期状態（非表示） */
+.about-title,
+.about-text p,
+.profile-img {
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+/* ========================================
+WORKS
+==========================================*/
+
+.works {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.lineup {
+  display: flex;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  margin: 2rem auto;
+  padding: 2rem 1.5rem;
+  width: 70%;
+  height: 380px;
+}
+
+.lineup-container {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  margin-right: 3rem;
+  padding-left: 2rem;
+}
+
+.lineup-title {
+  display: block;
+  text-align: center;
+}
+
+.lineup-list {
+  display: block;
+  width: 500px;
+  height: 300px;
+  text-align: left;
+  margin: auto;
+}
+
+.lineup-item {
+  line-height: 2;
+}
+
+span img {
+  vertical-align: bottom;
+}
+
+.lineup-list .lineup-item a {
+  text-decoration: underline;
+}
+
+.lineup-list .lineup-item a:hover {
+  font-weight: bold;
+}
+
+.products-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+.works section {
+  margin-top: 6.25rem;
+}
+
+/* main product・another product　共通*/
+.w-s-img img,
+.img-block img {
+  transition: transform 0.8s ease;
+}
+
+.w-s-img img {
+  width: 100%;
+  border-radius: var(--radius);
+  display: block;
+}
+
+.img-block img {
+  width: 500px;
+  border-radius: var(--radius);
+}
+
+.w-s-img img:hover,
+.img-block img:hover {
+  transform: scale(1.1);
+}
+
+.targetblank-btn {
+  display: block;
+  width: 200px;
+  line-height: 2;
+  padding: 0.5rem;
+  color: var(--main-color);
+  background-color: var(--accent-color);
+  border-radius: 50vh;
+  box-shadow: var(--shadow);
+  text-align: center;
+  margin: auto;
+}
+
+.btn {
+  width: 100%;
+  margin: 2rem 0;
+  transition: transform 0.8s ease;
+}
+
+.targetblank-btn:hover {
+  color: var(--accent-color);
+  background-color: var(--main-color);
+  box-shadow: var(--shadow);
+  font-weight: bold;
+  transform: scale(1.1);
+}
+
+.btn-container {
+  display: block;
+  width: 100%;
+}
+
+/* main product */
+/* 麦と陽だまり */
+.w-s {
+  width: 80%;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  margin: auto;
+  padding: 2rem 0;
+}
+
+.w-s-img {
+  display: flex;
+  width: 100%;
+  margin-bottom: 2rem;
+  justify-content: space-around;
+}
+
+.w-s a {
+  width: 31%;
+  max-width: 250px;
+}
+
+.flexbox {
+  display: flex;
+  text-align: left;
+}
+
+.works-targets {
+  display: flex;
+}
+
+.left-block,
+.right-block {
+  width: 45%;
+  margin: 0 auto;
+}
+
+.works-description {
+  padding: 1rem;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.w-s .works-skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.works-skills img {
+  width: 48px;
+  height: 48px;
+}
+
+/* another product */
+
+.el,
+.hs {
+  width: 80%;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  margin: auto;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+}
+
+.b-l,
+.p-b {
+  max-width: 1000px;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  display: block;
+  padding: 1rem;
+}
+
+.el .img-block,
+.hs .img-block {
+  width: 70%;
+}
+
+.el .text-block,
+.hs .text-block {
+  width: 30%;
+}
+
+.hs,
+.b-l,
+.p-b {
+  margin: 6.25rem auto 0;
+}
+
+.el,
+.hs {
+  flex-wrap: wrap;
+  /* 子要素が溢れたら折り返すようにする */
+  padding: 2rem;
+}
+
+.b-l .bn-en {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin-left: 80px;
+
+}
+
+.b-l .bn-gym {
+  width: 366px;
+  height: 259px;
+  object-fit: cover;
+  margin-right: 80px;
+}
+
+.first-row {
+  display: inline-block;
+  margin: 2rem 0;
+}
+
+.b-l .second-row img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.b-l .second-row {
+  width: calc((100% - 40px) / 3);
+  height: 200px;
+  gap: 35px;
+
+}
+
+.works-title {
+  margin-bottom: 1rem;
+}
+
+.bn-row {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.another-products .works-skills {
+  display: flex;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.works-skills .works-skills-p {
+  display: block;
+  width: 50%;
+  height: auto;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.works-skills .works-skills-ap {
+  display: block;
+  width: 50%;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.p-title {
+  margin-top: 1.5rem;
+}
+
+.p-b img {
+  border-radius: var(--radius);
+}
+
+.p-b .first-row img {
+  width: 300px;
+  height: 380px;
+  object-fit: cover;
+}
+
+.p-b .first-row {
+  gap: 20px;
+}
+
+.p-b .second-row img {
+  width: 310px;
+  height: 260px;
+  object-fit: cover;
+}
+
+.p-b .second-row {
+  gap: 15px;
+  margin-bottom: 2rem;
+}
+
+/* ========================================
+skills
+==========================================*/
+
+.skills-level-container {
+  width: 60%;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  margin: 7rem auto;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.skills-level-inner {
+  display: flex;
+  gap: 60px;
+  width: fit-content;
+  margin: auto;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.col img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.col .like-icon {
+  font-size: 2rem;
+}
+
+.level {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 1.5rem;
+}
+
+.level span:last-child {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.second-col {
+  margin-left: 0;
+}
+
+/* お問い合わせ */
+.contact {
+  text-align: center;
+}
+
+.contact p span {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.sns-link-area {
+  margin: 5rem auto 7rem;
+  width: fit-content;
+}
+
+.sns-link-area .insta-icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--main-color);
+  transition: fill 0.3s ease;
+  margin-left: 0.75rem;
+}
+
+.sns-link-area .btn-instagram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  height: 54px;
+  color: var(--main-color);
+  background-color: var(--accent-color);
+  border-radius: 50vh;
+  box-shadow: var(--shadow);
+  font-weight: normal;
+  transition: transform 0.3s ease;
+}
+
+.sns-link-area .btn-instagram:hover {
+  color: var(--accent-color);
+  background-color: var(--main-color);
+  font-weight: bold;
+  transform: scale(1.05);
+}
+
+.sns-link-area .btn-instagram:hover .insta-icon {
+  fill: var(--accent-color);
+}
+
+/* ========================================
+topボタン
+==========================================*/
+.top-btn {
+  width: 100px;
+  height: auto;
+  line-height: 2;
+  text-align: center;
+  background-color: var(--main-color);
+  color: var(--accent-color);
+  border-radius: var(--radius);
+  border: 1px solid var(--accent-color);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, opacity 0.4s ease;
+  position: fixed;
+  bottom: 100px;
+  right: 50px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.top-btn a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.top-btn:hover {
+  transform: scale(1.15);
+}
+
+
+/* ========================================
+フッター
+==========================================*/
+footer {
+  background-color: var(--accent-color);
+  width: 100%;
+  height: 240px;
+}
+
+.footer-inner {
+  color: var(--main-color);
+  padding: 4rem 2rem 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.cat-img img {
+  display: block;
+  width: 200px;
+  height: auto;
+}
+
+.cat-img {
+  width: auto;
+  margin-bottom: 0;
+  position: relative;
+  top: -60px;
+}
+
+footer small {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+/* アニメーション前の初期状態（非表示）にしておく */
+.floating-img {
+  opacity: 0;
+  will-change: transform, opacity;
+  transform: translateY(0);
+}

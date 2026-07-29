@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espresso Lane</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Zen+Kaku+Gothic+New&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/index2.css">
+    <!-- <script src="js/script.js" defer></script> -->
+
+
+
+
+</head>
+
+<body id="Top">
+    <header class="recrute-header">
+        <h1 class="recruit-header-title">
+            <a href="index2.html"><img src="images/logo2.svg" alt="ロゴ画像"></a>
+        </h1>
+
+        <div class="openbtn" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="recrute-header-nav" id="header-menu">
+            <ul class="recrute-header-list">
+                <li>
+                    <a href="index2.html"><img src="images/home-icon.svg" alt="Homeアイコン">Home</a>
+                </li>
+                <li>
+                    <a href="index2.html#About"><img src="images/About_icon.svg" alt="Aboutアイコン">About Us</a>
+                </li>
+
+                <li>
+                    <a href="index2.html#Menu"><img src="images/Menu_icon.svg" alt="Menuアイコン">Menu</a>
+                </li>
+
+                <li>
+                    <a href="index2.html#SPcontens"><img src="images/SP_icon.svg" alt="SPcontentアイコン">Special
+                        Content</a>
+                </li>
+
+                <li>
+                    <a href="recruit.html#Recrute"><img src="images/recruit-icon.svg" alt="recruteアイコン">Recrute</a>
+                </li>
+
+                <li class="header-list-item">
+                    <a href="index2.html#Access"> <img src="images/Access_icon.svg" alt="Accessアイコン"> Access</a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="Reclute" class="recrute">
+            <h2 class="recrutePage-title">スタッフ募集</h2>
+            <p class="recute-text">
+                Espresso Laneでは私たちと一緒に働いてくれるスタッフを募集しています。<br>
+                下記のフォームよりご応募お待ちしています。
+            </p>
+
+            <form action="confirm.php" method="post" class="form">
+                <div class="form-group">
+                    <label for="name">お名前</label>
+                    <input type="text" name="name" id="name" recruted />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">メールアドレス</label>
+                    <input type="email" name="email" id="email" recruted />
+                </div>
+                <div class="form-group">
+                    <label for="tel">電話番号</label>
+                    <input type="tel" name="tel" id="tel" />
+
+                </div>
+                <div class="form-group">
+                    <label for="position">希望職種</label>
+                    <select name="position" id="position">
+                        <option value="">選択してください</option>
+                        <option value="">ホールスタッフ</option>
+                        <option value="">キッチンスタッフ</option>
+                        <option value="">バリスタ</option>
+                        <option value="">パティシエ</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">志望動機</label>
+                    <textarea name="message" id="message" roes="5"></textarea>
+                </div>
+
+                <div class="form-submit">
+                    <button type="submit">送信する</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    <footer class="recrute-footer">
+        <div class="top-button">
+            <a href="#Top"><img src="images/Topicon.svg" width="181" height="181" alt="Topに戻るボタン"></a>
+        </div>
+        <a href="index2.html#Top"> <img src="images/Logo2.svg" alt="反転したロゴ"></a>
+        <address>
+            <p>〒000-0000　福岡県北九州市小倉北区～</p>
+            <p>TEL 000-000-0000</p>
+        </address>
+
+        <p>
+            <small>©　2026Espresso Lane. All rights reserved.</small>
+        </p>
+
+    </footer>
+</body>
+
+</html>
