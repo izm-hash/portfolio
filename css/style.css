@@ -60,7 +60,6 @@ ul {
 }
 
 /* セクションの区切りの飾り線 */
-/* --- 1. 各セクションの区切りの飾り線（調整版） --- */
 .works::before,
 .skills-level::before,
 .contact::before {
@@ -68,46 +67,32 @@ ul {
   display: block;
   width: 80%;
   border-bottom: 3px solid var(--accent-color);
-  margin: 7rem auto;
+  margin: 7rem auto 0;
   position: relative;
-  /* 【重要】直後にくる猫を線の上に配置しやすくするため、下側の余白を一度0にします */
-  margin-bottom: 0;
 }
 
-/* --- 2. 歩く猫（調整版） --- */
+/* --- 2. 歩く猫（ --- */
 .walking-cat {
   width: 50px;
   height: 50px;
   background-image: url('../img/walking-cat.png');
   background-repeat: no-repeat;
   background-size: 200px 50px;
-
-  /* 【ここを修正】パーセントではなくrelativeで線の真上に引っ張り上げます */
   position: relative;
   z-index: 10;
-
-  /* 飾り線の幅（80%）のスタート位置（左端）に合わせるための計算 */
   margin: 0 calc((100% - 80%) / 2);
-
-  /* 猫の高さ（50px）分だけ上に持ち上げて、線の上にピタッと乗せます */
   margin-top: -50px;
-  /* 飾り線が本来持っていた下の余白（7rem）をここで代わりに作ります */
   margin-bottom: 7rem;
-
   animation:
     cat-move 4s linear infinite,
-    /* 3秒だと少し早足だったので4秒に調整（お好みで） */
     play-cat 0.6s steps(4) infinite;
 }
 
-/* --- 3. アニメーション（追加・修正） --- */
-
-/* 線の幅（80%分）だけをぴったり動かす設定 */
+/* --- 3. アニメーション --- */
 @keyframes cat-move {
   0% {
     left: 80%;
     transform: translateX(-50px);
-    /* 右端からはみ出さないように猫の幅分引く */
   }
 
   100% {
