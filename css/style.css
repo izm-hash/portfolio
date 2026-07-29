@@ -347,16 +347,30 @@ WORKS
 .flexbox {
   display: flex;
   text-align: left;
+  justify-content: space-around;
+}
+
+.works-targets,
+.productio-time {
+  margin-top: 1rem;
+}
+
+.works-issue {
+  margin-left: 0;
 }
 
 .works-targets {
   display: flex;
 }
 
+/* .right-block ul {
+  list-style: circle;
+} */
+
 .left-block,
 .right-block {
   width: 45%;
-  margin: 0 auto;
+
 }
 
 .works-description,
