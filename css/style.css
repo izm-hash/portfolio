@@ -240,8 +240,10 @@ WORKS
   line-height: 2;
 }
 
-span img {
-  vertical-align: bottom;
+.icon {
+  vertical-align: baseline;
+  width: 20px;
+  height: 20px;
 }
 
 .lineup-list .lineup-item a {
@@ -250,6 +252,10 @@ span img {
 
 .lineup-list .lineup-item a:hover {
   font-weight: bold;
+}
+
+.lineup-list .lineup-item a:hover .icon {
+  fill: var(--accent-color);
 }
 
 .products-title {
