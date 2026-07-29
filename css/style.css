@@ -359,11 +359,13 @@ WORKS
   margin: 0 auto;
 }
 
-.works-description {
+.works-description,
+.post-mortem {
   padding: 1rem;
   text-align: left;
   line-height: 1.5;
 }
+
 
 .w-s .works-skills {
   display: flex;
