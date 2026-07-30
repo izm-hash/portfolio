@@ -371,6 +371,11 @@ WORKS
   width: 100%;
 }
 
+
+.works-title {
+  font-weight: bold;
+}
+
 /* main product */
 /* 麦と陽だまり */
 .w-s {
@@ -412,9 +417,6 @@ WORKS
   display: flex;
 }
 
-/* .right-block ul {
-  list-style: circle;
-} */
 
 .left-block,
 .right-block {
