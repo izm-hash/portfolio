@@ -265,3 +265,22 @@ ScrollTrigger.create({
         gsap.to(".top-btn", { opacity: 0, pointerEvents: "none", duration: 0.4 });
     }
 });
+
+// ==========================================
+// .walking-cat：画面下40%に現れたらアニメーション開始
+// ==========================================
+const catElements = document.querySelectorAll(".walking-cat");
+
+catElements.forEach(cat => {
+    gsap.timeline({
+        scrollTrigger: {
+            trigger: cat,
+            start: "top 60%",
+            once: true
+        }
+    }).to(cat, {
+        onStart: () => {
+            cat.classList.add("start-animation");
+        }
+    });
+});
