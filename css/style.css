@@ -83,10 +83,16 @@ ul {
   margin: 0 calc((100% - 80%) / 2);
   margin-top: -50px;
   margin-bottom: 7rem;
-  animation:
-    cat-move 4s linear infinite,
-    play-cat 0.6s steps(4) infinite;
+  left: 80%;
+  transform: translateX(-50px);
 }
+
+.walking-cat.start-animation {
+  animation:
+    cat-move 8s linear 1 forwards,
+    play-cat 0.6s steps(4) 13.3333;
+}
+
 
 /* --- 3. アニメーション --- */
 @keyframes cat-move {
